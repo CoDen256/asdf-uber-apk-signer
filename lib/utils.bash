@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/iBotPeaches/Apktool"
-TOOL_NAME="apktool"
-TOOL_TEST="apktool -h"
+GH_REPO="https://github.com/patrickfav/uber-apk-signer"
+TOOL_NAME="uber-apk-signer"
+TOOL_TEST="uber-apk-signer -h"
 
 fail() {
 	echo -e "asdf-$TOOL_NAME: $*"
@@ -38,7 +38,7 @@ download_release() {
 	version="$1"
 	filename="$2"
 
-	url="$GH_REPO/releases/download/v${version}/apktool_${version}.jar"
+	url="$GH_REPO/releases/download/v${version}/uber-apk-signer-${version}.jar"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
